@@ -1,6 +1,5 @@
 bower_components
 node_modules
-dist
 src/scripts/vendor.js
 src/scripts/vendor.min.js
 src/scripts/waffle-smilies.min.js
