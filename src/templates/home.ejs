@@ -1,0 +1,10 @@
+<div class="grid-block home">
+  <div class="smiley large-1 medium-2 small-3 grid-content"
+       ng-repeat="smiley in smilies | orderBy:'name' | filter:searchText"
+       ng-click="selectSmiley(smilies[$index])">
+    <div class="inner">
+      <img src="/images/{{smiley.image}}" />
+    </div>
+    <div class="name">{{smiley.name}}</div>
+  </div>
+</div>

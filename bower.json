@@ -1,0 +1,29 @@
+{
+  "name": "waffle-smilies",
+  "description": "SA Emoticon aggregator",
+  "main": "index.js",
+  "authors": [
+    "Alex Meswarb"
+  ],
+  "license": "ISC",
+  "keywords": [
+    "sa",
+    "emoticon",
+    "emote",
+    "emoji"
+  ],
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "foundation-apps": "^1.2.0",
+    "lodash": "^4.5.1"
+  }
+}

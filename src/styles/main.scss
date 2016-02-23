@@ -1,0 +1,63 @@
+@import '../../bower_components/foundation-apps/scss/foundation';
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+body {
+  background-color: #ecf2f6;
+}
+
+.home {
+  .smiley {
+    background-color: #fff;
+    border-radius: 25px;
+    cursor: pointer;
+    height: 100px;
+    margin: 20px 1rem;
+    padding: 0;
+    position: relative;
+    text-align: center;
+    transition: background-color .5s ease;
+
+    &:hover {
+      background-color: #2ba5f8;
+      color: #fff;
+
+      img {
+        opacity: .5;
+      }
+    }
+
+    .inner {
+      @include centerer;
+    }
+
+    .name {
+      bottom: 10px;
+      display: block;
+      font-family: 'Courier New', Courier, 'Lucida Sans Typewriter', 'Lucida Typewriter', monospace;
+      font-weight: bold;
+      position: absolute;
+      text-align: center;
+      width: 100%;
+    }
+  }
+
+  img {
+    clear: both;
+    display: block;
+    height: auto;
+    margin: 0 auto 10px;;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+.download {
+  margin: 10px 0;
+  text-align: center;
+}

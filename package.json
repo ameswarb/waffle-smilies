@@ -1,0 +1,29 @@
+{
+  "name": "waffle-smilies",
+  "version": "1.0.0",
+  "description": "SA Emoticon aggregator",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "sa",
+    "emoticon",
+    "emote",
+    "emoji"
+  ],
+  "author": "Alex Meswarb",
+  "license": "ISC",
+  "dependencies": {
+    "app-root-dir": "^1.0.2",
+    "browser-sync": "^2.11.1",
+    "download": "^4.4.3",
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "harp": "^0.20.1",
+    "http-proxy": "^1.13.2",
+    "jsdom": "^8.0.4",
+    "lodash": "^4.5.1",
+    "require-dir": "^0.3.0"
+  }
+}

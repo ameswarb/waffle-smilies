@@ -1,0 +1,37 @@
+<!doctype html>
+<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]><html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--><html class="no-js" lang="en" ng-app="application"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>waffle-smilies</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="/styles/main.css">
+  <script src="/scripts/lodash.min.js"></script>
+  <script src="/scripts/fastclick.js"></script>
+  <script src="/scripts/angular.min.js"></script>
+  <script src="/scripts/angular-ui-router.min.js"></script>
+  <script src="/scripts/angular-animate.min.js"></script>
+  <script src="/scripts/foundation-apps.min.js"></script>
+  <script src="/scripts/foundation-apps-templates.min.js"></script>
+  <script src="/scripts/routes.js"></script>
+  <script src="/scripts/app.js"></script>
+</head>
+<body ng-controller="homeController">
+  <div class="grid-frame vertical">
+    <div class="grid-content shrink" style="padding: 0;">
+      <ul class="primary condense menu-bar">
+        <li><a><strong>waffle smilies</strong></a></li>
+        <li class="has-form right">
+          <input type="text" placeholder="Search..." ng-model="searchText" />
+        </li>
+      </ul>
+    </div>
+    <div ui-view class="grid-content">
+    </div>
+  </div>
+</body>
+</html>
