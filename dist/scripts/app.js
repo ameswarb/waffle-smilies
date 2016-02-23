@@ -1,8 +1,6 @@
 (function () {
   'use strict';
 
-  console.log('-- init --');
-
   var app = angular.module('application', [
     'ui.router',
     'ngAnimate',
@@ -15,11 +13,20 @@
     .factory('lodash', function () {
       return window._;
     })
-    .controller('homeController', ['$scope', '$http', 'lodash',
-      function ($scope, $http, _) {
+    .factory('base64', function () {
+      return window.Base64;
+    })
+    .controller('homeController', ['$scope', '$http', 'lodash', 'base64',
+      function ($scope, $http, _, b64) {
+        $scope.smilies = [];
+
         $http.get('smilies.json')
          .then(function (res) {
-            $scope.smilies = _.values(res.data);
+           _.forEach(res.data, function (smiley) {
+             smiley.name = b64.decode(smiley.name);
+             smiley.caption = b64.decode(smiley.caption);
+             $scope.smilies.push(smiley);
+           });
           });
 
         $scope.selectSmiley = function (smiley) {

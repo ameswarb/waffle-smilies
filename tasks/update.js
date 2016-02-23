@@ -2,6 +2,9 @@
 
 var _ = require('lodash');
 var appRoot = require('app-root-dir').get();
+var b64 = require(appRoot + '/node_modules/js-base64/base64.js').Base64;
+var b64d = b64.decode;
+var b64e = b64.encode;
 var fs = require('fs');
 var gulp = require('gulp');
 var gutil = require('gulp-util');
@@ -26,11 +29,14 @@ gulp.task('update', function (cb) {
       var $ = window.$;
       $('.smilie').each(function () {
         var smiley = {};
-        smiley.name = $(this).children('.text').text().trim();
-        smiley.url = $(this).children('img').attr('src');
-        smiley.image = smiley.url.split('/').slice(-1)[0];
-        smiley.caption = $(this).children('img').attr('title');
-        newSmilies[smiley.name] = smiley;
+        smiley.name = b64e($(this).children('.text').text().trim());
+        var smileyURL = $(this).children('img').attr('src');
+        var smileyFname = smileyURL.split('/').slice(-1)[0].split('.')[0];
+        var smileyFext = smileyURL.split('/').slice(-1)[0].split('.')[1];
+        smiley.url = b64e(smileyURL);
+        smiley.image = b64e(smileyFname) + '.' + smileyFext;
+        smiley.caption = b64e($(this).children('img').attr('title'));
+        newSmilies[b64e(smiley.name)] = smiley;
       });
 
       // loop through the existing smilies.

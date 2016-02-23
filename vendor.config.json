@@ -1,5 +1,6 @@
 {
   "scripts": [
+    "js-base64/base64.js",
     "fastclick/lib/fastclick.js",
     "lodash/dist/lodash.min.js",
     "angular/angular.min.js",

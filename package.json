@@ -25,6 +25,7 @@
     "gulp-uglify": "^1.5.3",
     "harp": "^0.20.1",
     "http-proxy": "^1.13.2",
+    "js-base64": "^2.1.9",
     "jsdom": "^8.0.4",
     "lodash": "^4.5.1",
     "require-dir": "^0.3.0"

@@ -1,5 +1,8 @@
 var _ = require('lodash');
 var appRoot = require('app-root-dir').get();
+var b64 = require(appRoot + '/node_modules/js-base64/base64.js').Base64;
+var b64d = b64.decode;
+var b64e = b64.encode;
 var Download = require('download');
 var fs = require('fs');
 var gulp = require('gulp');
@@ -32,15 +35,16 @@ gulp.task('download', function (cb) {
   var fail = 0;
   _.forEach(dlSmilies, function (smiley, x, list) {
     new Download({ mode: '755' })
-      .get(smiley.url)
+      .get(b64d(smiley.url))
+      .rename(smiley.image)
       .dest(appRoot + '/src/images/')
       .run(function (err) {
         i++;
         if (!err) {
-          gutil.log(gutil.colors.green('✓ Got ' + smiley.url));
+          gutil.log(gutil.colors.green('✓ Got ' + b64d(smiley.url)));
           success++;
         } else {
-          gutil.log(gutil.colors.red('✗ Failed: ' + smiley.url));
+          gutil.log(gutil.colors.red('✗ Failed: ' + b64d(smiley.url)));
           fail++;
         }
 
