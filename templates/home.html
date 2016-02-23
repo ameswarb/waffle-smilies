@@ -3,7 +3,7 @@
        ng-repeat="smiley in smilies | orderBy:'name' | filter:searchText"
        ng-click="selectSmiley(smilies[$index])">
     <div class="inner">
-      <img src="/images/{{smiley.image}}" />
+      <img src="images/{{smiley.image}}" />
     </div>
     <div class="name">{{smiley.name}}</div>
   </div>
