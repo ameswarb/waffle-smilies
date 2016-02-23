@@ -1,3 +1,5 @@
+# ![](https://raw.githubusercontent.com/ameswarb/waffle-smilies/master/readme-imgs/siren.gif) THE CONTENTS OF SMILIES.JSON ARE AGGREGATED FROM THE SOMETHINGAWFUL FORUMS. I AM NOT RESPONSIBLE FOR NOR DO I ENDORSE ANY OFFENSIVE STRINGS THAT MIGHT APPEAR IN SMILIES.JSON ![](https://raw.githubusercontent.com/ameswarb/waffle-smilies/master/readme-imgs/siren.gif)
+
 # waffle-smilies
 
 somethingawful smiley aggregator
