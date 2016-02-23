@@ -8,7 +8,7 @@ var reload      = browserSync.reload;
 /**
  * Serve the Harp Site from the src directory
  */
-gulp.task('serve', function () {
+gulp.task('serve', ['scripts'], function () {
   harp.server(appRoot + '/src', {
     port: 9000,
   }, function () {
