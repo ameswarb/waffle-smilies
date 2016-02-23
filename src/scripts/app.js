@@ -17,15 +17,13 @@
     })
     .controller('homeController', ['$scope', '$http', 'lodash',
       function ($scope, $http, _) {
-        console.log('--- homeController init ---');
-        $http.get('/smilies.json')
+        $http.get('smilies.json')
          .then(function (res) {
             $scope.smilies = _.values(res.data);
           });
 
         $scope.selectSmiley = function (smiley) {
           console.log('--- selectSmiley ---');
-          console.log(smiley);
         };
       },
     ])
